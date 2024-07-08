@@ -2,7 +2,19 @@
   <div class="row">
     <div class="col">
       <p>Person List</p>
+      <button
+        class="btn btn-primary"
+        [disabled]="isDisabled"
+        (click)="addPerson()"
+      >
+        Add person
+      </button>
+      {{ message }}
       <app-person></app-person>
+
+      <label for="degree">Degree</label>
+      <input type="text" class="form-control" [(ngModel)]="degree">
+      {{ degree }}
     </div>
   </div>
 </div>
