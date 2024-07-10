@@ -28,5 +28,7 @@ export class AppComponent {
     const newPerson = new Person(this.inputFirstName, this.inputLastName);
 
     this.people.push(newPerson);
+    this.inputFirstName = '';
+    this.inputLastName = '';
   }
 }
