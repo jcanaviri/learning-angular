@@ -9,11 +9,15 @@
       >
         Add person
       </button>
-      {{ message }}
+
+      <span *ngIf="show else withoutMessage">{{ message }}</span>
+      <ng-template #withoutMessage>
+        <span>{{ message }}</span>
+      </ng-template>
       <app-person></app-person>
 
       <label for="degree">Degree</label>
-      <input type="text" class="form-control" [(ngModel)]="degree">
+      <input type="text" class="form-control" [(ngModel)]="degree" />
       {{ degree }}
     </div>
   </div>
