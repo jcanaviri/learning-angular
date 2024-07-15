@@ -5,11 +5,12 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
 import { Person } from './persons/person.model';
 import { CommonModule } from '@angular/common';
+import { PersonComponent } from "./person/person.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PersonsComponent, CalculatorComponent, FormsModule, CommonModule],
+  imports: [RouterOutlet, PersonsComponent, CalculatorComponent, FormsModule, CommonModule, PersonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

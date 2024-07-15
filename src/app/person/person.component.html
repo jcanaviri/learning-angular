@@ -1,8 +1,9 @@
-<p>Name: {{ firstName }}</p>
-<p>Last Name: {{ lastName }}</p>
-<p>Age: {{ getAge() + 1 }}</p>
-
-<div (keyup)="(0)">
-  <input type="text" #input />
-  {{ input.value }}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div >
+        {{ i }} {{ person.firstName }} {{ person.lastName }}
+      </div>
+    </div>
+  </div>
 </div>

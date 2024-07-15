@@ -1,18 +1,15 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { Person } from '../persons/person.model';
 
 @Component({
   selector: 'app-person',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './person.component.html',
   styleUrl: './person.component.css',
 })
 export class PersonComponent {
-  firstName = 'Charlie';
-  lastName = 'Brown';
-  private age = 10;
-
-  getAge(): number {
-    return this.age;
-  }
+  @Input() person: Person;
+  @Input() i: number;
 }
