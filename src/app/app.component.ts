@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { PersonsComponent } from './persons/persons.component';
-import { CalculatorComponent } from './calculator/calculator.component';
-import { FormsModule } from '@angular/forms';
-import { Person } from './persons/person.model';
 import { CommonModule } from '@angular/common';
-import { PersonComponent } from "./person/person.component";
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { PersonComponent } from './person/person.component';
+import { Person } from './persons/person.model';
+import { PersonsComponent } from './persons/persons.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, PersonsComponent, CalculatorComponent, FormsModule, CommonModule, PersonComponent],
+  imports: [
+    RouterOutlet,
+    PersonsComponent,
+    CalculatorComponent,
+    FormsModule,
+    CommonModule,
+    PersonComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -19,10 +26,7 @@ export class AppComponent {
   inputFirstName = '';
   inputLastName = '';
 
-  people: Person[] = [
-    new Person('John', 'Smith'),
-    new Person('Susan', 'Anniston'),
-  ];
+  people: Person[] = [];
 
   addPerson() {
     if (this.inputFirstName === '' && this.inputLastName === '') return;
