@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { FormComponent } from "./form/form.component";
 import { PersonComponent } from './person/person.component';
 import { Person } from './persons/person.model';
 import { PersonsComponent } from './persons/persons.component';
@@ -17,7 +18,8 @@ import { PersonsComponent } from './persons/persons.component';
     FormsModule,
     CommonModule,
     PersonComponent,
-  ],
+    FormComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -28,12 +30,7 @@ export class AppComponent {
 
   people: Person[] = [];
 
-  addPerson() {
-    if (this.inputFirstName === '' && this.inputLastName === '') return;
-    const newPerson = new Person(this.inputFirstName, this.inputLastName);
-
-    this.people.push(newPerson);
-    this.inputFirstName = '';
-    this.inputLastName = '';
+  addPerson(person: Person) {
+    this.people.push(person);
   }
 }
