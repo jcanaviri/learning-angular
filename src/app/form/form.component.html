@@ -1,0 +1,25 @@
+<form class="form container" (submit)="add()">
+  <div class="row">
+    <label for="numberOne">Number:</label>
+    <input
+      [(ngModel)]="numberOne"
+      type="number"
+      class="form-control my-2"
+      id="numberOne"
+      name="numberOne"
+      placeholder="Write a number"
+    />
+
+    <label for="numberTwo">Number:</label>
+    <input
+      [(ngModel)]="numberTwo"
+      type="number"
+      class="form-control my-2"
+      id="numberTwo"
+      name="numberTwo"
+      placeholder="Write a number"
+    />
+
+    <button type="submit" class="btn btn-primary col-2">Calculate</button>
+  </div>
+</form>
